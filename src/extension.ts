@@ -1,7 +1,9 @@
 // The module 'vscode' contains the VS Code extensibility API
 // Import the module and reference it with the alias vscode in your code below
 import * as vscode from 'vscode';
+import cmd_readwrite_clipboard from './cmd_readwrite_clipboard';
 import cmd_read_homedir from './cmd_read_homedir';
+import cmd_run_exe from './cmd_run_exe';
 import cmd_web_request from './cmd_web_request';
 const fs = require('fs');
 const os = require('os');
@@ -20,6 +22,8 @@ export function activate(context: vscode.ExtensionContext) {
 	const commands: Map<string,()=>void> = new Map([
 		['helloworld.read_home_dir', cmd_read_homedir],
 		['helloworld.web_request', cmd_web_request],
+		['helloworld.run_exe', cmd_run_exe],
+		['helloworld.readwrite_clipboard', cmd_readwrite_clipboard],
 	]);
 	
 	for(let [key,cmd] of commands) {

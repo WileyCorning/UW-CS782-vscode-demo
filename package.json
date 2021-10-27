@@ -11,7 +11,9 @@
 	],
 	"activationEvents": [
 		"onCommand:helloworld.read_home_dir",
-		"onCommand:helloworld.web_request"
+		"onCommand:helloworld.web_request",
+		"onCommand:helloworld.run_exe",
+		"onCommand:helloworld.readwrite_clipboard"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
@@ -23,6 +25,14 @@
 			{
 				"command": "helloworld.web_request",
 				"title": "Make web request"
+			},
+			{
+				"command": "helloworld.run_exe",
+				"title": "Run executable"
+			},
+			{
+				"command": "helloworld.readwrite_clipboard",
+				"title": "Read/write clipboard"
 			}
 		]
 	},
@@ -48,6 +58,7 @@
 		"@vscode/test-electron": "^1.6.2"
 	},
 	"dependencies": {
+		"clipboardy": "2.3.0",
 		"node-fetch": "^2.0.0"
 	}
 }
