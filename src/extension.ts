@@ -1,6 +1,8 @@
 // The module 'vscode' contains the VS Code extensibility API
 // Import the module and reference it with the alias vscode in your code below
 import * as vscode from 'vscode';
+import cmd_read_homedir from './cmd_read_homedir';
+import cmd_web_request from './cmd_web_request';
 const fs = require('fs');
 const os = require('os');
 
@@ -15,19 +17,16 @@ export function activate(context: vscode.ExtensionContext) {
 	// The command has been defined in the package.json file
 	// Now provide the implementation of the command with registerCommand
 	// The commandId parameter must match the command field in package.json
-	let disposable = vscode.commands.registerCommand('helloworld.helloWorld', () => {
-		// The code you place here will be executed every time your command is executed
-		// Display a message box to the user
-		let homedir = os.homedir();
-		
-		let homefiles = fs.readdirSync(homedir);
-		
-		
-		
-		vscode.window.showInformationMessage(`In ${homedir} found ${homefiles.join(', ')}`);
-	});
-
-	context.subscriptions.push(disposable);
+	const commands: Map<string,()=>void> = new Map([
+		['helloworld.read_home_dir', cmd_read_homedir],
+		['helloworld.web_request', cmd_web_request],
+	]);
+	
+	for(let [key,cmd] of commands) {
+		let disposable = vscode.commands.registerCommand(key, () => cmd());
+		context.subscriptions.push(disposable);
+		console.log(`Registered ${key}`);
+	}
 }
 
 // this method is called when your extension is deactivated
