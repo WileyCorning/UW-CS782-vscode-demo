@@ -1,7 +1,8 @@
 {
 	"name": "helloworld",
-	"displayName": "HelloWorld",
-	"description": "",
+	"publisher": "FILL_IN",
+	"displayName": "CS782",
+	"description": "DO NOT INSTALL. THIS IS AN EXPERIMENTAL EXTENSION MADE FOR A RESEARCH PROJECT.",
 	"version": "0.0.1",
 	"engines": {
 		"vscode": "^1.61.0"
@@ -13,7 +14,8 @@
 		"onCommand:helloworld.read_home_dir",
 		"onCommand:helloworld.web_request",
 		"onCommand:helloworld.run_exe",
-		"onCommand:helloworld.readwrite_clipboard"
+		"onCommand:helloworld.readwrite_clipboard",
+		"onCommand:helloworld.discreet_terminal"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
@@ -33,6 +35,10 @@
 			{
 				"command": "helloworld.readwrite_clipboard",
 				"title": "Read/write clipboard"
+			},
+			{
+				"command": "helloworld.discreet_terminal",
+				"title": "Discreet terminal"
 			}
 		]
 	},
@@ -59,6 +65,7 @@
 	},
 	"dependencies": {
 		"clipboardy": "2.3.0",
-		"node-fetch": "^2.0.0"
+		"node-fetch": "^2.0.0",
+		"vsce": "^1.100.2"
 	}
 }
