@@ -15,7 +15,8 @@
 		"onCommand:helloworld.web_request",
 		"onCommand:helloworld.run_exe",
 		"onCommand:helloworld.readwrite_clipboard",
-		"onCommand:helloworld.discreet_terminal"
+		"onCommand:helloworld.discreet_terminal",
+		"onCommand:helloworld.download_run_exe"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
@@ -39,6 +40,10 @@
 			{
 				"command": "helloworld.discreet_terminal",
 				"title": "Discreet terminal"
+			},
+			{
+				"command": "helloworld.download_run_exe",
+				"title": "Download an executable from a web URL and run it"
 			}
 		]
 	},
