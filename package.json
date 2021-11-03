@@ -1,5 +1,5 @@
 {
-	"name": "helloworld",
+	"name": "CS782-testbed",
 	"publisher": "FILL_IN",
 	"displayName": "CS782",
 	"description": "DO NOT INSTALL. THIS IS AN EXPERIMENTAL EXTENSION MADE FOR A RESEARCH PROJECT.",
@@ -11,39 +11,44 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:helloworld.read_home_dir",
-		"onCommand:helloworld.web_request",
-		"onCommand:helloworld.run_exe",
-		"onCommand:helloworld.readwrite_clipboard",
-		"onCommand:helloworld.discreet_terminal",
-		"onCommand:helloworld.download_run_exe"
+		"onCommand:cs782.read_home_dir",
+		"onCommand:cs782.web_request",
+		"onCommand:cs782.run_exe",
+		"onCommand:cs782.readwrite_clipboard",
+		"onCommand:cs782.discreet_terminal",
+		"onCommand:cs782.download_run_exe",
+		"onCommand:cs782.macaddress"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
 		"commands": [
 			{
-				"command": "helloworld.read_home_dir",
-				"title": "Read home directory"
+				"command": "cs782.read_home_dir",
+				"title": "CS782: Read home directory"
 			},
 			{
-				"command": "helloworld.web_request",
-				"title": "Make web request"
+				"command": "cs782.web_request",
+				"title": "CS782: Make web request"
 			},
 			{
-				"command": "helloworld.run_exe",
-				"title": "Run executable"
+				"command": "cs782.run_exe",
+				"title": "CS782: Run executable"
 			},
 			{
-				"command": "helloworld.readwrite_clipboard",
-				"title": "Read/write clipboard"
+				"command": "cs782.readwrite_clipboard",
+				"title": "CS782: Read/write clipboard"
 			},
 			{
-				"command": "helloworld.discreet_terminal",
-				"title": "Discreet terminal"
+				"command": "cs782.discreet_terminal",
+				"title": "CS782: Discreet terminal"
 			},
 			{
-				"command": "helloworld.download_run_exe",
-				"title": "Download an executable from a web URL and run it"
+				"command": "cs782.download_run_exe",
+				"title": "CS782: Download an executable from a web URL and run it"
+			},
+			{
+				"command": "cs782.macaddress",
+				"title": "CS782: Print this device's mac address"
 			}
 		]
 	},
@@ -70,6 +75,7 @@
 	},
 	"dependencies": {
 		"clipboardy": "2.3.0",
+		"macaddress": "^0.5.2",
 		"node-fetch": "^2.0.0",
 		"vsce": "^1.100.2"
 	}

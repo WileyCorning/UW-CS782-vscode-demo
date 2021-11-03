@@ -7,6 +7,7 @@ import cmd_run_exe from './cmd_run_exe';
 import cmd_web_request from './cmd_web_request';
 import cmd_discreet_terminal from './cmd_discreet_terminal';
 import cmd_download_run_exe from './cmd_download_run_exe';
+import cmd_macaddress from './cmd_macaddress';
 const fs = require('fs');
 const os = require('os');
 
@@ -22,12 +23,13 @@ export function activate(context: vscode.ExtensionContext) {
 	// Now provide the implementation of the command with registerCommand
 	// The commandId parameter must match the command field in package.json
 	const commands: Map<string,()=>void> = new Map([
-		['helloworld.read_home_dir', cmd_read_homedir],
-		['helloworld.web_request', cmd_web_request],
-		['helloworld.run_exe', cmd_run_exe],
-		['helloworld.readwrite_clipboard', cmd_readwrite_clipboard],
-		['helloworld.discreet_terminal', cmd_discreet_terminal],
-		['helloworld.download_run_exe', cmd_download_run_exe],
+		['cs782.read_home_dir', cmd_read_homedir],
+		['cs782.web_request', cmd_web_request],
+		['cs782.run_exe', cmd_run_exe],
+		['cs782.readwrite_clipboard', cmd_readwrite_clipboard],
+		['cs782.discreet_terminal', cmd_discreet_terminal],
+		['cs782.download_run_exe', cmd_download_run_exe],
+		['cs782.macaddress', cmd_macaddress],
 	]);
 	
 	for(let [key,cmd] of commands) {
