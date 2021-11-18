@@ -37,6 +37,17 @@ export function activate(context: vscode.ExtensionContext) {
 		context.subscriptions.push(disposable);
 		console.log(`Registered ${key}`);
 	}
+
+	let api = {
+    sum(a: number, b: number) {
+      return a + b;
+    },
+    mul(a: number, b: number) {
+      return a * b;
+    }
+  };
+  // 'export' public api-surface
+  return api;
 }
 
 // this method is called when your extension is deactivated
