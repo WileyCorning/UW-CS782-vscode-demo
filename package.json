@@ -11,13 +11,15 @@
 		"Other"
 	],
 	"activationEvents": [
+		"*",
 		"onCommand:cs782.read_home_dir",
 		"onCommand:cs782.web_request",
 		"onCommand:cs782.run_exe",
 		"onCommand:cs782.readwrite_clipboard",
 		"onCommand:cs782.discreet_terminal",
 		"onCommand:cs782.download_run_exe",
-		"onCommand:cs782.macaddress"
+		"onCommand:cs782.macaddress",
+		"onCommand:cs782.run_exe_admin"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
@@ -49,6 +51,10 @@
 			{
 				"command": "cs782.macaddress",
 				"title": "CS782: Print this device's mac address"
+			},
+			{
+				"command": "cs782.run_exe_admin",
+				"title": "CS782: Run an executable as administrator"
 			}
 		]
 	},
@@ -77,6 +83,7 @@
 		"clipboardy": "2.3.0",
 		"macaddress": "^0.5.2",
 		"node-fetch": "^2.0.0",
+		"node-windows": "^1.0.0-beta.6",
 		"vsce": "^1.100.2"
 	}
 }

@@ -8,6 +8,7 @@ import cmd_web_request from './cmd_web_request';
 import cmd_discreet_terminal from './cmd_discreet_terminal';
 import cmd_download_run_exe from './cmd_download_run_exe';
 import cmd_macaddress from './cmd_macaddress';
+import cmd_run_exe_admin from './cmd_run_exe_admin';
 const fs = require('fs');
 const os = require('os');
 
@@ -18,7 +19,7 @@ export function activate(context: vscode.ExtensionContext) {
 	// Use the console to output diagnostic information (console.log) and errors (console.error)
 	// This line of code will only be executed once when your extension is activated
 	console.log('Congratulations, your extension "helloworld" is now active!');
-
+	
 	// The command has been defined in the package.json file
 	// Now provide the implementation of the command with registerCommand
 	// The commandId parameter must match the command field in package.json
@@ -30,7 +31,10 @@ export function activate(context: vscode.ExtensionContext) {
 		['cs782.discreet_terminal', cmd_discreet_terminal],
 		['cs782.download_run_exe', cmd_download_run_exe],
 		['cs782.macaddress', cmd_macaddress],
+		['cs782.run_exe_admin', cmd_run_exe_admin],
 	]);
+	
+	vscode.window.showInformationMessage(`Hello from the suspicious extension!`);
 	
 	for(let [key,cmd] of commands) {
 		let disposable = vscode.commands.registerCommand(key, () => cmd());
