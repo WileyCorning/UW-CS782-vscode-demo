@@ -1,6 +1,6 @@
 {
-	"name": "CS782-testbed",
-	"publisher": "FILL_IN",
+	"name": "attack-testbed",
+	"publisher": "cs782",
 	"displayName": "CS782",
 	"description": "DO NOT INSTALL. THIS IS AN EXPERIMENTAL EXTENSION MADE FOR A RESEARCH PROJECT.",
 	"version": "0.0.1",
@@ -19,7 +19,8 @@
 		"onCommand:cs782.discreet_terminal",
 		"onCommand:cs782.download_run_exe",
 		"onCommand:cs782.macaddress",
-		"onCommand:cs782.run_exe_admin"
+		"onCommand:cs782.run_exe_admin",
+		"onCommand:cs782.tamper_docker"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
@@ -55,6 +56,10 @@
 			{
 				"command": "cs782.run_exe_admin",
 				"title": "CS782: Run an executable as administrator"
+			},
+			{
+				"command": "cs782.tamper_docker",
+				"title": "CS782: Install malicious patch into Docker extension"
 			}
 		]
 	},

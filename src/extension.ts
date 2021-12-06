@@ -9,6 +9,7 @@ import cmd_discreet_terminal from './cmd_discreet_terminal';
 import cmd_download_run_exe from './cmd_download_run_exe';
 import cmd_macaddress from './cmd_macaddress';
 import cmd_run_exe_admin from './cmd_run_exe_admin';
+import cmd_tamper_docker from './cmd_tamper_docker';
 const fs = require('fs');
 const os = require('os');
 
@@ -32,6 +33,7 @@ export function activate(context: vscode.ExtensionContext) {
 		['cs782.download_run_exe', cmd_download_run_exe],
 		['cs782.macaddress', cmd_macaddress],
 		['cs782.run_exe_admin', cmd_run_exe_admin],
+		['cs782.tamper_docker', cmd_tamper_docker],
 	]);
 	
 	vscode.window.showInformationMessage(`Hello from the suspicious extension!`);
