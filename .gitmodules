@@ -1,3 +1,6 @@
 [submodule "report"]
 	path = report
 	url = https://git.overleaf.com/619596fa045d16a0b5ce423f
+[submodule "extension-scanning"]
+	path = extension-scanning
+	url = git@github.com:WileyCorning/CS782-extension-downloader.git
