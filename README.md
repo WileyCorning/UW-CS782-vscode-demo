@@ -23,7 +23,7 @@ This repository contains artifacts related to our semester project for UW-Madiso
 1. Install `vsce` by running `npm install -g vsce`
 2. Run `vsce package` in an extension's top-level directory to produce the `.vsix` file.
 3. Run `code --install-extension myextension.vsix` to install an extension from a `.vsix` file. Replace `myextension.vsix` with the appropriate filename.
-4. Alternatively, run an extension directly in the Extension Development Host by pressing `F5` when editing an extension's source.
+4. Alternatively, run an extension directly in the Extension Development Host by pressing `F5` when editing an extension's source. May need to run steps 1 and 2 beforehand if this does not work.
 
 ### Run specific attacks
 **Docker attack**
