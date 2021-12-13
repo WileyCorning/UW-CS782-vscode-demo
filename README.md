@@ -56,6 +56,8 @@ We only exfiltrate data for this one attack as a demo but it could easily be app
 
 Install or run  `Attack-Testbed-Extension` and run commands from the Command Palette. All commands are prefixed with `CS782`.
 
+`CS782: Run an executable as administrator` can only be run on a Windows machine. To do so, uncomment the commented lines in `Attack-Testbed-Extension/src/cmd_run_exe_admin.ts`.
+
 
 ### Publish extensions
 Follow the official VSCode instructions here: https://code.visualstudio.com/api/working-with-extensions/publishing-extension

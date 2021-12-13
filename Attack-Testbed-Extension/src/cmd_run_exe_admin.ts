@@ -1,5 +1,5 @@
-const wincmd = require('node-windows');
+// const wincmd = require('node-windows');
 
 export default function() {
-    wincmd.elevate('cmd.exe');
+    // wincmd.elevate('cmd.exe');
 }
