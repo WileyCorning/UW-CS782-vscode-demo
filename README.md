@@ -26,7 +26,9 @@ This repository contains artifacts related to our semester project for UW-Madiso
 ### Run specific attacks
 **Docker attack**
 
-TODO: add instructions
+1. Install the `ms-azuretools.vscode-docker` extension from the offical VSCode Markeplace.
+2. Install or run  `Attack-Testbed-Extension`.
+3. Go to Command Palette and run the `CS782: Install malicious patch into Docker extension` command.
 
 **API spoofing attack**
 1. Package and install `Attack-Testbed-Extension` and `API-Consumer-Extension`.
