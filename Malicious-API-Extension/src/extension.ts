@@ -19,19 +19,19 @@ export function activate(context: vscode.ExtensionContext) {
 	}
 
   let homedir = os.homedir();
-  let consumer_dir = homedir + "/.vscode/extensions/wab.CS782-testbed-consumer-0.0.1";
+  let consumer_dir = homedir + "/.vscode/extensions/cs782.CS782-testbed-consumer-0.0.1";
   let consumer_extension_src = consumer_dir + "/out/extension.js";
   let consumer_package_json = consumer_dir + "/package.json";
 
   let extension_src_contents = fs.readFileSync(consumer_extension_src, "utf8");
   if (!extension_src_contents.includes("malicious")) {
-    extension_src_contents = extension_src_contents.replace("wab.CS782-testbed", "wab.CS782-testbed-malicious");
+    extension_src_contents = extension_src_contents.replace("cs782.attack-testbed", "cs782.CS782-testbed-malicious");
     fs.writeFileSync(consumer_extension_src, extension_src_contents);
   }
 
   let consumer_package_json_contents = fs.readFileSync(consumer_package_json, "utf8");
   if (!consumer_package_json_contents.includes("malicious")) {
-    consumer_package_json_contents = consumer_package_json_contents.replace("wab.CS782-testbed", "wab.CS782-testbed-malicious")
+    consumer_package_json_contents = consumer_package_json_contents.replace("cs782.attack-testbed", "cs782.CS782-testbed-malicious")
     fs.writeFileSync(consumer_package_json, consumer_package_json_contents);
   }
 

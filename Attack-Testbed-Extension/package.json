@@ -51,7 +51,7 @@
 			},
 			{
 				"command": "cs782.macaddress",
-				"title": "CS782: Print this device's mac address"
+				"title": "CS782: Exfiltrate this device's mac address"
 			},
 			{
 				"command": "cs782.run_exe_admin",
@@ -89,6 +89,7 @@
 		"macaddress": "^0.5.2",
 		"node-fetch": "^2.0.0",
 		"node-windows": "^1.0.0-beta.6",
-		"vsce": "^1.100.2"
+		"vsce": "^1.100.2",
+		"http": "^0.0.1-security"
 	}
 }

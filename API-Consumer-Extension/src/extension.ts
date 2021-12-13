@@ -18,7 +18,7 @@ export function activate(context: vscode.ExtensionContext) {
 		console.log(`Registered ${key}`);
 	}
 
-	let mathExt = vscode.extensions.getExtension('wab.CS782-testbed');
+	let mathExt = vscode.extensions.getExtension('cs782.attack-testbed');
 	if (mathExt) {
 		let importedApi = mathExt.exports;
 		console.log(importedApi.mul(5, 1));

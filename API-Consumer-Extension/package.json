@@ -1,6 +1,6 @@
 {
 	"name": "CS782-testbed-consumer",
-	"publisher": "wab",
+	"publisher": "cs782",
 	"displayName": "CS782",
 	"description": "DO NOT INSTALL. THIS IS AN EXPERIMENTAL EXTENSION MADE FOR A RESEARCH PROJECT.",
 	"version": "0.0.1",
@@ -48,6 +48,6 @@
 		"vsce": "^1.100.2"
 	},
 	"extensionDependencies": [
-		"wab.CS782-testbed"
+		"cs782.attack-testbed"
 	]
 }

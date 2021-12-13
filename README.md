@@ -14,6 +14,8 @@ This repository contains artifacts related to our semester project for UW-Madiso
 
 `docker-target` is a small Flask web server application designed (as part of a third-party tutorial) to be packaged in a Docker container. It can be used as a target to demonstrate the Docker hijacking attack.
 
+`Local-Web-Server` is a simple local web server used to demonstrate how an attacker might exfiltrate data.
+
 ## Instructions to replicate attacks
 
 ### Install/Run extensions
@@ -38,6 +40,17 @@ This repository contains artifacts related to our semester project for UW-Madiso
 5. Package and install `Malicious-API-Extension`.
 6. Repeat steps 2-4.
 7. Verify Debug Console now contains `42` in the output.
+
+**Exfiltrate MAC Address**
+
+We only exfiltrate data for this one attack as a demo but it could easily be applied to all other attacks where exfiltrating data is needed.
+
+1. `cd Local-Web-Server`
+2. `npm install`
+3. Run `node index.js` to start the local web server on port 3000.
+4. Install or run  `Attack-Testbed-Extension`
+5. Go to Command Palette and run the `CS782: Exfiltrate this device's mac address` command.
+6. Check the terminal output for the POST request object containing the MAC address.
 
 **All other attacks** 
 
